@@ -89,6 +89,10 @@ a, h1, h2, h3, h4, h5, p, span {
   color: #3c4393;
 }
 
+i {
+  font-style: normal;
+}
+
 .highlight {
   background-color: #3c4393;
   color: #fff;

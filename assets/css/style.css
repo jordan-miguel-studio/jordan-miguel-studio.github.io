@@ -1,0 +1,326 @@
+/* Thanks for joining :) */
+/*@font-face {
+  font-family: 'Lato';
+  src: url('Lato-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+*/
+
+/*-------- Resets --------*/
+img {
+  margin: 0 auto;
+  display: block;
+}
+
+ul[class],
+ol[class],
+li[class] {
+  list-style: none;
+}
+
+.show, .hidden {
+  display: none;
+}
+
+.padding {
+  padding: 0 40px 0;
+}
+
+/* -------- Typography -------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,sans-serif,Apple Color Emoji;
+  color: #3c4393;
+  font-size: 16px;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  background-color: #fff;
+}
+
+html, body, h1, h2, h3, h4, p, span, a, div, img {
+  /*-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;*/
+}
+
+a, a:focus, a:visited, img {
+  outline: none;
+  border: none;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a, h1, h2, h3, h4, h5, p, span {
+  color: #3c4393;
+}
+
+.highlight {
+  background-color: #3c4393;
+  color: #fff;
+}
+
+.intro-title a {
+  font-weight:400;
+  text-decoration:underline;
+}
+
+.intro-title h1 {
+  font-size: 4rem;
+}
+
+.dropdown-title {
+  font-size: 20px;
+}
+
+.title-sec {
+  font-style: italic;
+}
+
+.info-description p{
+  font-size: 1rem;
+}
+
+.result h1 {
+  font-size: 16px;
+}
+
+b, strong {
+  border-bottom: 2px solid #111;
+}
+
+.bottomline span {
+  letter-spacing: 1px;
+}
+
+.dropdown-title:hover {
+  cursor: s-resize;
+}
+
+/*-------- Structure --------*/
+
+.bottomline {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: 100000;
+  color: white;
+  bottom: 0px;
+  left: 0px;
+  padding-left: 4px;
+  padding-right: 12px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  border-top: 2px solid black;
+  text-transform: uppercase;
+  background-color: #00f;
+}
+
+.selected {
+  border-top: 2px solid #00f !important;
+}
+
+.filter {
+  display: flex;
+  margin-top: 30px;
+}
+
+.result {
+  margin-top:30px;
+}
+
+/*-------- Components --------*/
+.c_title_inner, .dropdown-title {
+  display: flex;
+}
+
+.c_title_inner {
+  justify-content: space-between;
+  padding: 13px 0 13px 0;
+  border-bottom: 2px solid #3c4393;
+}
+
+.dropdown-title {
+  border-bottom: 1px solid #3c4393;
+}
+
+.dropdown-title {
+  padding: 10px 0 10px 0;
+  position: relative;
+  line-height: 1.3em;
+}
+
+.dropdown-title span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dropdown-title-title {
+  width: 70%;
+}
+
+.dropdown-title i {
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+
+.dropdown-content {
+  padding: 0 0 30px 0;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  min-width: 100%;
+}
+
+.dropdown-content p {
+  padding-top: 20px;
+}
+
+.rotate {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+input[type=checkbox] + label {
+  background-color: #e7e7f1;
+}
+
+input[type=checkbox]:checked+label {
+  border: 2px dotted #000;
+}
+
+.checkbox {
+  padding: 0px 10px 5px 10px;
+}
+
+/*.c_title_inner .title {
+  width: 600px;
+}
+
+.c_title_inner .category {
+  width: 800px;
+}
+*/
+.dropdown-title:first-child a {
+  width: 46%;
+}
+/*-------- Mobile --------*/
+
+@media (max-width:950px) {
+  .dropdown-title:first-child a {
+    width: 44%;
+  }
+}
+
+@media (max-width:740px) {
+
+  .padding {
+    padding: 10px 20px 20px 20px;
+  }
+
+  .dropdown {
+    width: 70%;
+  }
+
+  .dropdown-title, .dropdown-content p {
+    font-size:15px;
+  }
+
+  .dropdown-title:first-child a {
+    width: 43%;
+  }
+
+  .dropdown-title i {
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
+
+  #index-categories {
+    padding-bottom: 10px;
+  }
+
+  .intro-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .info-description {
+    font-weight: 300;
+  }
+
+  .filter {
+    padding: 0px 0px 0px 0px;
+    display: block;
+  }
+
+  .filter-head {
+    padding: 0px 0px 20px 0px;
+  }
+
+  .bottomline {
+    display: none;
+  }
+
+  .display_none {
+    display:none;
+  }
+
+  .checkbox {
+    padding: 0px 10px 12px 10px;
+  }
+}
+
+/*--------  Device Specific --------*/
+
+/* iPhone 6, 7, & 8 Plus */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  .dropdown-title:first-child a {
+     width: 39%;
+}

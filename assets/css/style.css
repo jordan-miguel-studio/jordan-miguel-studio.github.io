@@ -273,7 +273,7 @@ input[type=checkbox]:checked+label {
   }
 
   .dropdown-title:first-child a {
-    width: 43%;
+    width: 37%;
   }
 
   .dropdown-title i {

@@ -34,7 +34,6 @@
   font-style: normal;
 }
 */
-
 /*-------- Resets --------*/
 img {
   margin: 0 auto;
@@ -59,7 +58,7 @@ li[class] {
 html, body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,sans-serif,Apple Color Emoji;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif, Apple Color Emoji;
   color: #3c4393;
   font-size: 16px;
   width: 100%;
@@ -99,8 +98,8 @@ i {
 }
 
 .intro-title a {
-  font-weight:400;
-  text-decoration:underline;
+  font-weight: 400;
+  text-decoration: underline;
 }
 
 .intro-title h1 {
@@ -115,7 +114,7 @@ i {
   font-style: italic;
 }
 
-.info-description p{
+.info-description p {
   font-size: 1rem;
 }
 
@@ -136,7 +135,6 @@ b, strong {
 }
 
 /*-------- Structure --------*/
-
 .bottomline {
   display: flex;
   position: fixed;
@@ -167,7 +165,7 @@ b, strong {
 }
 
 .result {
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 /*-------- Components --------*/
@@ -230,7 +228,7 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-input[type=checkbox] + label {
+input[type=checkbox]+label {
   background-color: #e7e7f1;
 }
 
@@ -253,8 +251,8 @@ input[type=checkbox]:checked+label {
 .dropdown-title:first-child a {
   width: 46%;
 }
-/*-------- Mobile --------*/
 
+/*-------- Mobile --------*/
 @media (max-width:950px) {
   .dropdown-title:first-child a {
     width: 44%;
@@ -262,7 +260,6 @@ input[type=checkbox]:checked+label {
 }
 
 @media (max-width:740px) {
-
   .padding {
     padding: 10px 20px 20px 20px;
   }
@@ -272,7 +269,7 @@ input[type=checkbox]:checked+label {
   }
 
   .dropdown-title, .dropdown-content p {
-    font-size:15px;
+    font-size: 15px;
   }
 
   .dropdown-title:first-child a {
@@ -311,7 +308,7 @@ input[type=checkbox]:checked+label {
   }
 
   .display_none {
-    display:none;
+    display: none;
   }
 
   .checkbox {
@@ -320,11 +317,14 @@ input[type=checkbox]:checked+label {
 }
 
 /*--------  Device Specific --------*/
-
-/* iPhone 6, 7, & 8 Plus */
-@media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px) {
+/* Iphone X */
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
   .dropdown-title:first-child a {
-     width: 39%;
-}
+    width: 36%;
+  }
+
+  /* iPhone 6, 7, & 8 Plus */
+  @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+    .dropdown-title:first-child a {
+      width: 39%;
+    }

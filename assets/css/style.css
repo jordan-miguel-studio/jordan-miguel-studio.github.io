@@ -309,7 +309,7 @@ input[type=checkbox]:checked+label {
   .checkbox {
     font-size: 14px;
     padding: 0px 10px 0px 10px;
-    margin-left: -8%;
+    margin-left: -7%;
   }
 }
 
@@ -326,5 +326,7 @@ input[type=checkbox]:checked+label {
 @media only screen
 and (min-device-width : 414px)
 and (max-device-width : 736px) {
-
+  .info-wrapper {
+    margin-top: 1%;
+  }
 }

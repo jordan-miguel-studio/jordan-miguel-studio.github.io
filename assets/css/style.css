@@ -182,7 +182,7 @@ i {
   width: 70%;
 }
 
-.dropdown-title i {
+span.arrow-down {
   position: absolute;
   top: 12px;
   right: 0;

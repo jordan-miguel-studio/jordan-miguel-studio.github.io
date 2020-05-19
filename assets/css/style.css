@@ -244,6 +244,9 @@ input[type=checkbox]:checked+label {
   font-size: 25px;
 }
 
+.updated {
+  opacity: 0.6;
+}
 
 /*-------- Mobile --------*/
 

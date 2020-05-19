@@ -34,6 +34,7 @@
   font-style: normal;
 }
 */
+
 /*-------- Resets --------*/
 img {
   margin: 0 auto;
@@ -58,13 +59,16 @@ li[class] {
 html, body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica, Arial, sans-serif, Apple Color Emoji;
-  color: #3c4393;
+  line-height: 1.4;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Helvetica,Arial,sans-serif,Apple Color Emoji;
+  color: #515456;
   font-size: 16px;
+  font-weight: 300;
   width: 100%;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   background-color: #fff;
+  letter-spacing: 0.050em;
 }
 
 html, body, h1, h2, h3, h4, p, span, a, div, img {
@@ -85,45 +89,17 @@ a, a:visited {
 }
 
 a, h1, h2, h3, h4, h5, p, span {
-  color: #3c4393;
+  color: #515456;
 }
 
-i {
-  font-style: normal;
-}
-
-.highlight {
-  background-color: #3c4393;
-  color: #fff;
-}
-
-.intro-title a {
-  font-weight: 400;
-  text-decoration: underline;
-}
-
-.intro-title h1 {
-  font-size: 4rem;
-}
-
-.dropdown-title {
-  font-size: 20px;
+.info-inner h1 {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .title-sec {
   font-style: italic;
-}
-
-.info-description p {
-  font-size: 1rem;
-}
-
-.result h1 {
-  font-size: 16px;
-}
-
-b, strong {
-  border-bottom: 2px solid #111;
 }
 
 .bottomline span {
@@ -135,37 +111,36 @@ b, strong {
 }
 
 /*-------- Structure --------*/
-.bottomline {
-  display: flex;
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  z-index: 100000;
-  color: white;
-  bottom: 0px;
-  left: 0px;
-  padding-left: 4px;
-  padding-right: 12px;
-  padding-top: 7px;
-  padding-bottom: 8px;
-  border-top: 2px solid black;
-  text-transform: uppercase;
-  background-color: #00f;
-}
 
-.selected {
-  border-top: 2px solid #00f !important;
+.wrapper {
+  display: flex;
 }
 
 .filter {
+  margin-top: 5%;
   display: flex;
-  margin-top: 30px;
 }
 
-.result {
-  margin-top: 30px;
+.information {
+  width: 50%;
+  height: 100vh;
+  float: left;
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+}
+
+.info-wrapper {
+  margin-top: 25%;
+}
+
+.links {
+  width:50%;
+  padding: 40px;
+}
+
+.first {
+  border-top: 1px solid #272727;
 }
 
 /*-------- Components --------*/
@@ -176,11 +151,11 @@ b, strong {
 .c_title_inner {
   justify-content: space-between;
   padding: 13px 0 13px 0;
-  border-bottom: 2px solid #3c4393;
+  border-bottom: 2px solid #272727;
 }
 
 .dropdown-title {
-  border-bottom: 1px solid #3c4393;
+  border-bottom: 1px solid #272727;
 }
 
 .dropdown-title {
@@ -188,6 +163,15 @@ b, strong {
   position: relative;
   line-height: 1.3em;
 }
+
+/*.performance:hover ~ .music, .art, .food {
+  -webkit-filter: blur(13px);
+  -moz-filter: blur(13px);
+  -o-filter: blur(13px);
+  -ms-filter: blur(13px);
+  filter: blur(13px);
+}
+*/
 
 .dropdown-title span {
   display: inline-block;
@@ -228,8 +212,8 @@ input[type=checkbox] {
   visibility: hidden;
 }
 
-input[type=checkbox]+label {
-  background-color: #e7e7f1;
+input[type=checkbox] + label {
+  opacity: 0.6;
 }
 
 input[type=checkbox]:checked+label {
@@ -240,25 +224,30 @@ input[type=checkbox]:checked+label {
   padding: 0px 10px 5px 10px;
 }
 
-/*.c_title_inner .title {
-  width: 600px;
+.red {
+  color: red;
+  font-size: 25px;
 }
 
-.c_title_inner .category {
-  width: 800px;
+.blue {
+  color: blue;
+  font-size: 25px;
 }
-*/
-.dropdown-title:first-child a {
-  width: 46%;
+
+.green {
+  color: green;
+  font-size: 25px;
 }
+
+.purple {
+  color: purple;
+  font-size: 25px;
+}
+
 
 /*-------- Mobile --------*/
-@media (max-width:950px) {
-  .dropdown-title:first-child a {
-    width: 44%;
-  }
-}
 
+/* Breakpoints */
 @media (max-width:740px) {
   .padding {
     padding: 10px 20px 20px 20px;
@@ -266,14 +255,6 @@ input[type=checkbox]:checked+label {
 
   .dropdown {
     width: 70%;
-  }
-
-  .dropdown-title, .dropdown-content p {
-    font-size: 15px;
-  }
-
-  .dropdown-title:first-child a {
-    width: 37%;
   }
 
   .dropdown-title i {
@@ -286,14 +267,6 @@ input[type=checkbox]:checked+label {
     padding-bottom: 10px;
   }
 
-  .intro-title h1 {
-    font-size: 2.5rem;
-  }
-
-  .info-description {
-    font-weight: 300;
-  }
-
   .filter {
     padding: 0px 0px 0px 0px;
     display: block;
@@ -303,28 +276,54 @@ input[type=checkbox]:checked+label {
     padding: 0px 0px 20px 0px;
   }
 
-  .bottomline {
-    display: none;
-  }
-
-  .display_none {
-    display: none;
-  }
-
   .checkbox {
     padding: 0px 10px 12px 10px;
   }
 }
 
-/*--------  Device Specific --------*/
-/* Iphone X */
-@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
-  .dropdown-title:first-child a {
-    width: 38%;
+/* Mobile devices */
+@media (max-width: 500px) {
+  .wrapper {
+    display: block;
   }
 
-  /* iPhone 6, 7, & 8 Plus */
-  @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
-    .dropdown-title:first-child a {
-      width: 39%;
+  .information, .links {
+    width: 100%;
+    height: auto;
+    float: left
+  }
+
+  .links {
+    padding:0px;
+  }
+
+  .info-wrapper {
+    margin-top: 8%;
+  }
+
+  .filter {
+    margin-top: 0;
+    margin-bottom: 12%;
+  }
+
+  .checkbox {
+    font-size: 14px;
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+/* Really small devices */
+@media (max-width: 350px) {
+    body {
+      font-size: 12px;
     }
+}
+
+/*--------  Device Specific --------*/
+
+/* iPhone 6, 7, & 8 Plus */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+
+}

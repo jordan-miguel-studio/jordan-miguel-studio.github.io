@@ -5,14 +5,14 @@ $(document).ready(function() {
     var $target = $(this).parent().find(".dropdown-content").first();
     if ($target.length != 0) {
       if (!$target.is(":visible"))
-        $this.find("i").addClass("rotate");
+        $this.find(".arrow-down").addClass("rotate");
       else
-        $this.find("i").removeClass("rotate");
+        $this.find(".arrow-down").removeClass("rotate");
       $target.toggle(400)
     }
   });
 
-  
+
 
 });
 

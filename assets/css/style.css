@@ -110,6 +110,10 @@ i {
   cursor: s-resize;
 }
 
+.dropdown-content p {
+  font-size: 14px;
+}
+
 /*-------- Structure --------*/
 
 .wrapper {

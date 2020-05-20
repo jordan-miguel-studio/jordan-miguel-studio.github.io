@@ -267,7 +267,6 @@ input[type=checkbox]:checked+label {
 
   .dropdown-title i {
     position: absolute;
-    top: 7px;
     right: 0;
   }
 

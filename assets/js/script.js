@@ -5,9 +5,9 @@ $(document).ready(function() {
     var $target = $(this).parent().find(".dropdown-content").first();
     if ($target.length != 0) {
       if (!$target.is(":visible"))
-        $this.find(".arrow-down").addClass("rotate");
+        $this.find("i").addClass("rotate");
       else
-        $this.find(".arrow-down").removeClass("rotate");
+        $this.find("i").removeClass("rotate");
       $target.toggle(400)
     }
   });

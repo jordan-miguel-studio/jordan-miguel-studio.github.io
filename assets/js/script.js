@@ -13,12 +13,14 @@ $(document).ready(function() {
   });
 
   $(document).ready(function() {
+    if($(window).width() >= 700){
     $('.dropdown-title').hover(function() {
         $('.information').addClass('blur');
       },
       function() {
         $('.information').removeClass('blur');
       }, 5000);
+      }
   });
 
 });

@@ -317,6 +317,10 @@ input[type=checkbox]:checked+label {
     padding: 0px 10px 0px 10px;
     margin-left: -7%;
   }
+
+  .blur {
+    display: none;
+  }
 }
 
 /* Really small devices */

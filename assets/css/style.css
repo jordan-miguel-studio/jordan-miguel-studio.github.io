@@ -168,14 +168,13 @@ a, h1, h2, h3, h4, h5, p, span {
   line-height: 1.3em;
 }
 
-/*.performance:hover ~ .music, .art, .food {
+.blur {
   -webkit-filter: blur(13px);
   -moz-filter: blur(13px);
   -o-filter: blur(13px);
   -ms-filter: blur(13px);
   filter: blur(13px);
 }
-*/
 
 .dropdown-title span {
   display: inline-block;
@@ -204,7 +203,7 @@ span.arrow-down {
   padding-top: 20px;
 }
 
-.blur {
+.rotate {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);

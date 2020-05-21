@@ -12,7 +12,14 @@ $(document).ready(function() {
     }
   });
 
-
+  $(document).ready(function() {
+    $('.dropdown-title').hover(function() {
+        $('.information').addClass('blur');
+      },
+      function() {
+        $('.information').removeClass('blur');
+      }, 5000);
+  });
 
 });
 
